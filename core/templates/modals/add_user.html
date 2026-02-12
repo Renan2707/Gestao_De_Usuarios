@@ -8,23 +8,24 @@
             </button>
         </div>
 
-        <form action=".">
+        <form action="{% url 'add_user' %}" method="POST">
+            {% csrf_token %}
             <div class="p-6 space-y-4">
                 <div>
-                    <label for="name" class="block text-gray-500 mb-1">Nome Completo</label>
-                    <input type="text" id="name" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Alice Smith">
+                    <label for="nome" class="block text-gray-500 mb-1">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
                 </div>
 
                 <div>
-                    <label for="role" class="block text-gray-500 mb-1">Cargo</label>
-                    <input type="text" id="role" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Desenvolvedora Sênior">
+                    <label for="cargo" class="block text-gray-500 mb-1">Cargo</label>
+                    <input type="text" name="cargo" id="cargo" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
                 </div>
 
                 <div>
                     <label for="status" class="block text-gray-500 mb-1">Status</label>
-                    <select id="status" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
-                        <option value="active" selected>Ativo</option>
-                        <option value="inactive">Inativo</option>
+                    <select id="status" name="status" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
+                        <option value="True" selected>Ativo</option>
+                        <option value="False">Inativo</option>
                     </select>
                 </div>
 
