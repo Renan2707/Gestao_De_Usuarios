@@ -1,0 +1,39 @@
+<!-- MODAL DE EDIÇÃO DE USUÁRIO -->
+<div class="absolute fixed inset-0 bg-black/70 pt-40">
+    <div class="bg-white rounded-xl shadow-lg w-11/12 max-w-120 mx-auto">
+        <div class="w-full p-4 flex items-center justify-between bg-indigo-400 border-b border-gray-300 rounded-t-xl">
+            <h2 class="font-semibold text-white text-lg"> <i class="fa-solid fa-pen-to-square mr-2"></i>Editar Usuário</h2>
+            <button class="hover:bg-indigo-600 text-gray-200 rounded-lg p-2 flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+
+        <form action=".">
+            <div class="p-6 space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-500 mb-1">Nome Completo</label>
+                    <input type="text" id="name" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Alice Smith">
+                </div>
+
+                <div>
+                    <label for="role" class="block text-gray-500 mb-1">Cargo</label>
+                    <input type="text" id="role" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Desenvolvedora Sênior">
+                </div>
+
+                <div>
+                    <label for="status" class="block text-gray-500 mb-1">Status</label>
+                    <select id="status" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
+                        <option value="active" selected>Ativo</option>
+                        <option value="inactive">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center space-x-5">
+                    <button class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
+
+                    <button class="w-full bg-indigo-600 text-white p-2 rounded-lg shadow hover:bg-indigo-700 transition duration-200 cursor-pointer">Salvar Alterações</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

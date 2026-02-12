@@ -1,0 +1,27 @@
+ <!-- MODAL DE EXCLUSÃO -->
+<div class="absolute fixed inset-0 bg-black/70 pt-40">
+    <div class="bg-white rounded-xl shadow-lg w-11/12 max-w-120 mx-auto">
+        <form action=".">
+            <div class="p-6 space-y-4">
+
+                <div class="">
+                    <div class="bg-red-200 rounded-full p-2 size-20 flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-triangle-exclamation text-red-700 text-3xl"></i>
+                    </div>
+
+                    <p class="text-center font-semibold text-xl">Excluir Usuário</p>
+                </div>
+                
+                
+                <p class="text-gray-500 text-center">Tem certeza que deseja excluir o usuário <span class="font-bold text-gray-800">Alice Smith</span>? Esta ação não pode ser desfeita.</p>
+                
+
+                <div class="flex items-center space-x-5">
+                    <button class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
+
+                    <button class="w-full bg-red-600 text-white p-2 rounded-lg shadow hover:bg-red-700 transition duration-200 cursor-pointer">Excluir Usuário</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
