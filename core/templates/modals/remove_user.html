@@ -1,5 +1,5 @@
  <!-- MODAL DE EXCLUSÃO -->
-<div class="absolute fixed inset-0 bg-black/70 pt-40">
+<div x-show="modalExcluir" x-cloak class="absolute fixed inset-0 bg-black/70 pt-40">
     <div class="bg-white rounded-xl shadow-lg w-11/12 max-w-120 mx-auto">
         <form action=".">
             <div class="p-6 space-y-4">
@@ -17,7 +17,7 @@
                 
 
                 <div class="flex items-center space-x-5">
-                    <button class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
+                    <button @click="modalExcluir = false" class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
 
                     <button class="w-full bg-red-600 text-white p-2 rounded-lg shadow hover:bg-red-700 transition duration-200 cursor-pointer">Excluir Usuário</button>
                 </div>

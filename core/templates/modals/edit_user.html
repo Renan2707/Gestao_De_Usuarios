@@ -1,9 +1,9 @@
 <!-- MODAL DE EDIÇÃO DE USUÁRIO -->
-<div class="absolute fixed inset-0 bg-black/70 pt-40">
+<div x-show="modalEditar" x-cloak class="absolute fixed inset-0 bg-black/70 pt-40">
     <div class="bg-white rounded-xl shadow-lg w-11/12 max-w-120 mx-auto">
         <div class="w-full p-4 flex items-center justify-between bg-indigo-400 border-b border-gray-300 rounded-t-xl">
             <h2 class="font-semibold text-white text-lg"> <i class="fa-solid fa-pen-to-square mr-2"></i>Editar Usuário</h2>
-            <button class="hover:bg-indigo-600 text-gray-200 rounded-lg p-2 flex items-center justify-center cursor-pointer">
+            <button @click="modalEditar = false" class="hover:bg-indigo-600 text-gray-200 rounded-lg p-2 flex items-center justify-center cursor-pointer">
                 <i class="fa-solid fa-xmark text-2xl"></i>
             </button>
         </div>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="flex items-center space-x-5">
-                    <button class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
+                    <button @click="modalEditar = false" class="w-full border hover:bg-gray-200 transition duration-200 hover:shadow border-gray-300 p-2 rounded-lg shadow transition duration-200 cursor-pointer">Cancelar</button>
 
                     <button class="w-full bg-indigo-600 text-white p-2 rounded-lg shadow hover:bg-indigo-700 transition duration-200 cursor-pointer">Salvar Alterações</button>
                 </div>
