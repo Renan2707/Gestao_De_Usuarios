@@ -12,19 +12,19 @@
             <div class="p-6 space-y-4">
                 <div>
                     <label for="name" class="block text-gray-500 mb-1">Nome Completo</label>
-                    <input type="text" id="name" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Alice Smith">
+                    <input type="text" id="name" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="{{usuario.nome}}">
                 </div>
 
                 <div>
                     <label for="role" class="block text-gray-500 mb-1">Cargo</label>
-                    <input type="text" id="role" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="Desenvolvedora Sênior">
+                    <input type="text" id="role" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400" value="{{usuario.cargo}}">
                 </div>
 
                 <div>
                     <label for="status" class="block text-gray-500 mb-1">Status</label>
                     <select id="status" class="w-full border border-gray-300 rounded-lg p-2 focus:outline-gray-400">
-                        <option value="active" selected>Ativo</option>
-                        <option value="inactive">Inativo</option>
+                        <option value="True" {% if usuario.status == True %} selected{% endif %}>Ativo</option>
+                        <option value="False" {% if usuario.status == False %} selected{% endif %}>Inativo</option>
                     </select>
                 </div>
 
